@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Trifada Property</title>
+        <link rel="icon" type="image/x-icon" href="img/icon.svg" />
+
+        <!-- Font Awesome icons (free version)-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+        <!-- wow -->
+        <link href="css/animate.css" rel="stylesheet" />
+        <script src="js/wow.js"></script>
+        <script>
+            $(document).ready(function() {
+                new WOW().init();
+            })
+        </script>
+        
+        <script src="js/script.js"></script>
+        <link href="css/style.css" rel="stylesheet" />
+        <link href="css/style-mobile.css" rel="stylesheet" />
+        <link href="css/reset.css" rel="stylesheet" />
+    </head>
+    <body>
+    <div class="header_atas wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+        <div class="kontak_mob">
+            <a href="kontak.html"><i class="fas fa-phone-volume" aria-hidden="true"></i></a>
+            <a href="kontak.html"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+        </div>
+        <div class="container_24">
+            <div class="menu-mobile"><div class="menu-mobile"><a href="#menumob"></a></div></div>
+            <div class="logo"><a href=""><img src="img/logo_grup.png" height="40px"></a></div>
+            <div class="kontak">
+                <a name="number_WA"><i class="fab fa-whatsapp" aria-hidden="true"></i> </a>
+                <a name="number_phone"><i class="fas fa-phone-volume" aria-hidden="true"></i> </a>
+            </div>
+        </div>
+    </div>
+    <nav id="menumob" class="mm-menu mm-horizontal mm-offcanvas">
+        <ul class="mm-list mm-panel mm-opened mm-current" id="mm-0">
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item"><a href="." aria-current="page">Home</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="tentang-kami.html">Tentang Kami</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom/ has-sub /"><a class="mm-subopen" href="#mm-1"></a><a href="#">Perumahan</a></li>
+            <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="brosur-harga.html">Brosur &amp; Harga</a></li> -->
+            <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="testimoni">Testimoni</a></li> -->
+            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="kontak.html">Kontak</a></li>
+            <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="blog">Blog</a></li> -->
+        </ul>
+        <ul class="sub-menu mm-list mm-panel mm-hidden" id="mm-1">
+            <li class="mm-subtitle"><a class="mm-subclose" href="#mm-0">Perumahan</a></li>
+        </ul>
+    </nav>
+    <script src="js/jquery.mmenu.min.all.js"></script>
+    <link href="css/jquery.mmenu.all.css" rel="stylesheet" type="text/css" />
+
+
+
+    <div class="menu_atas wow fadeIn" id="navbar" style="visibility: visible; animation-name: fadeIn;">
+        <div class="container_24">
+            <div id="cssmenu">
+                <ul>
+                    <li name="home"><a href="." aria-current="page">Home</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page" name="tentang-kami"><a href="tentang-kami.html">Tentang Kami</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom/ has-sub / "  name="perumahan">
+                        <a href="#">Perumahan</a>
+                        <ul class="sub-menu"></ul>
+                    </li>
+                    <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page" name="brosur-harga"><a href="brosur-harga.html">Brosur &amp; Harga</a></li> -->
+                    <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="testimoni">Testimoni</a></li> -->
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page" name="kontak"><a href="kontak.html">Kontak</a></li>
+                    <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="blog">Blog</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        function setCurrentMenuItem(name){
+            document.getElementsByName(name).forEach(element => element.classList.add("current-menu-item"));
+        }
+        $(document).ready(function() {
+            window.onscroll = function() {pageYOffsetCheck()};
+            
+            let navbar = document.getElementById("navbar");
+            let sticky = navbar.offsetTop;
+            
+            function pageYOffsetCheck() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky");
+                } else {
+                    navbar.classList.remove("sticky");
+                }
+            }
+            
+            let navbar_perumahan = document.getElementById('navbar').getElementsByClassName('sub-menu')[0];
+            for(let i = 0; i < perumahan.length; i++){
+                let li = document.createElement('li');
+                li.classList.add('menu-item');
+                li.classList.add('menu-item-type-post_type');
+                li.classList.add('menu-item-object-perumahan');
+                
+                let a = document.createElement('a');
+                a.href = 'perumahan.html?name=' + perumahan[i].name;
+                a.innerHTML = perumahan[i].fullname;
+                li.appendChild(a);
+                
+                navbar_perumahan.appendChild(li);
+            }
+            
+            document.getElementById('menumob').getElementsByClassName('sub-menu')[0].appendChild(navbar_perumahan.cloneNode(true));
+
+            $('nav#menumob').mmenu();
+        })
+    </script>
+<script>
+    $(document).ready(function() {
+        setCurrentMenuItem('perumahan');
+        let name = (new URLSearchParams(window.location.search)).get('name');
+        for (let i = 0; i < perumahan.length; i++) {
+            if(name == perumahan[i].name){
+                let bxslider = document.getElementsByClassName('bxslider')[0];
+                let owl_demo2 = document.getElementById('owl-demo2');
+                for (let j = 0; j < perumahan[i].pictures.length; j++) {
+                    let bxslider_1 = document.createElement('li');
+                    
+                    let bxslider_2 = document.createElement('div');
+                    bxslider_2.classList.add('box');
+                    
+                    let bxslider_3 = document.createElement('img');
+                    bxslider_3.src = 'img/' + name + '/' + perumahan[i].pictures[j];
+                    bxslider_3.style.objectFit = 'contain';
+                    bxslider_2.appendChild(bxslider_3);
+
+                    bxslider_1.appendChild(bxslider_2);
+                    bxslider.appendChild(bxslider_1);
+
+                    let owl_demo2_1 = document.createElement('div');
+                    owl_demo2_1.classList.add('pic');
+                    
+                    let owl_demo2_2 = document.createElement('a');
+                    owl_demo2_2.setAttribute('data-slide-index', j);
+                    
+                    let owl_demo2_3 = document.createElement('img');
+                    owl_demo2_3.src = 'img/' + name + '/' + perumahan[i].pictures[j];
+                    owl_demo2_3.style.objectFit = 'contain';
+                    owl_demo2_2.appendChild(owl_demo2_3);
+
+                    owl_demo2_1.appendChild(owl_demo2_2);
+                    owl_demo2.appendChild(owl_demo2_1);
+                }
+                
+                let nameClass = document.getElementsByClassName('name');
+                for (let j = 0; j < nameClass.length; j++) {
+                    nameClass[j].innerHTML = perumahan[i].fullname;
+                }
+                document.getElementsByClassName('header_more')[0].getElementsByTagName('img')[0].src = 'img/' + name + '/' + perumahan[i].bgimg;
+                
+                let detail_desc = document.getElementsByClassName('detail_desc')[0];
+                detail_desc.getElementsByTagName('a')[0].href = perumahan[i].linkMaps;
+                detail_desc.getElementsByTagName('a')[0].innerHTML += 'Jl. ' + perumahan[i].jalan + ', Kel. ' + perumahan[i].kelurahan + ', Kec. '+ perumahan[i].kecamatan + ', '+ perumahan[i].dati2 + ', '+ perumahan[i].propinsi;
+                let detail_desc_call = detail_desc.getElementsByClassName('call')[0];
+                for(let j = 0; j < perumahan[i].point.length; j++)
+                {
+                    let check = document.createElement('div');
+                    check.classList.add('check');
+                    
+                    let ico = document.createElement('div');
+                    ico.classList.add('ico');
+
+                    let icheck = document.createElement('i');
+                    icheck.classList.add('fas');
+                    icheck.classList.add('fa-check');
+                    icheck.setAttribute('aria-hidden', 'true');
+                    ico.appendChild(icheck);
+                    
+                    check.appendChild(ico);
+                    check.innerHTML += ' ' + perumahan[i].point[j];
+                    
+                    detail_desc_call.parentNode.insertBefore(check, detail_desc_call);
+                }
+                detail_desc_call.getElementsByClassName('download')[0].href = 'img/' + name + '/brosur_' + name + '.pdf';
+                detail_desc.getElementsByTagName('iframe')[0].src = './logo-perumahan.html?name=' + name;
+                
+                let detail_location = document.getElementsByClassName('detail_location')[0];
+                detail_location.getElementsByClassName('subtitle')[0].innerHTML =  perumahan[i].kelurahan + ', ' + perumahan[i].kecamatan + ', '+ perumahan[i].dati2;
+                detail_location.getElementsByTagName('iframe')[0].src = perumahan[i].embedMaps;
+                
+                document.getElementsByClassName('detail_siteplan')[0].getElementsByTagName('img')[0].src = 'img/' + name + '/siteplan.png';
+                
+                let parentHorizontalTab_list = document.getElementById('parentHorizontalTab').getElementsByClassName('resp-tabs-list')[0];
+                let parentHorizontalTab_container = document.getElementById('parentHorizontalTab').getElementsByClassName('resp-tabs-container')[0];
+                for(let j = 0; j < perumahan[i].tipe.length; j++){
+                    let li = document.createElement('li');
+                    li.classList.add('resp-tab-item');
+                    li.innerHTML = perumahan[i].tipe[j].name;
+                    
+                    parentHorizontalTab_list.appendChild(li);
+                    
+                    let pic_site = document.createElement('div');
+                    pic_site.classList.add('pic_site');
+                    for(let k = 0; k < perumahan[i].tipe[j].pictures.length; k++){
+                        let img = document.createElement('img');
+                        img.src = 'img/' + name + '/' + perumahan[i].tipe[j].pictures[k];
+                        pic_site.appendChild(img);
+                    }
+                    parentHorizontalTab_container.appendChild(pic_site);
+                }
+            }
+        }
+    })
+</script>
+
+
+
+<div class="header_more wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+	<img style="object-fit: cover;">
+    <div class="back"><h1 class="name"></h1></div>
+</div>
+
+
+
+<div class="slide_detail">
+    <div class="container_24">
+        <div class="picbig wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+            <ul class="bxslider" style="width: auto; position: relative;"></ul>
+        </div>
+        <div class="picsmall wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+            <div class="slide">
+                <div id="bx-pager">
+                    <div id="owl-demo2" class="owl-carousel owl-theme" style="opacity: 1; display: block;"></div>
+                </div>
+            </div>
+            <div class="customNavigation2">
+                <a class="btn prev" id="prev2">PREV</a>
+                <a class="btn next" id="next2">NEXT</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.1.2/jquery.bxslider.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){    
+		var owl2 = $("#owl-demo2");
+		owl2.owlCarousel({
+    		items : 5, //10 items above 1000px browser width
+    		itemsDesktop : [1000,4], //5 items between 1000px and 901px
+    		itemsDesktopSmall : [900,3], // 3 items betweem 900px and 601px
+    		itemsTablet: [550,3], //2 items between 600 and 0;
+    		itemsMobile : false,
+    		slideSpeed : 1400
+		});
+		$("#next2").click(function(){
+			owl2.trigger('owl.next');
+		})
+		$("#prev2").click(function(){
+			owl2.trigger('owl.prev');
+		});
+
+        $('.bxslider').bxSlider({
+            pagerCustom: '#bx-pager'
+        });  
+    });
+</script>
+
+
+<div class="detail_desc">
+    <div class="container_24">
+        <div class="side wow fadeInLeft" style="visibility: visible; animation-name: fadeInLeft;">
+            <h1 class="name"></h1>
+            <a class="list"><div class="ico"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div> </a>
+            <div class="call">
+                <div class="button">
+                    <a class="download">Download Brosur <i class="fas fa-download" aria-hidden="true"></i></a>
+                </div>
+                <div class="button">
+                    <a href="kontak.html" class="whatsapp"><i class="fab fa-whatsapp" aria-hidden="true"></i> Hubungi Kami</a>
+                </div>
+            </div>
+        </div>
+        <div class="side wow fadeInRight" style="visibility: visible; animation-name: fadeInRight;">
+            <p>
+                <iframe loading="lazy" width="100%" height="300" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="detail_location wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+    <div class="container_24">
+        <h1 class="title">Lokasi</h1>
+        <h2 class="subtitle"></h2>
+        <div class="maps">
+            <p><iframe width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
+        </div> 
+    </div>
+</div>
+
+
+
+<div class="detail_siteplan">
+    <div class="container_24">
+        <h1 class="title wow fadeIn" style="visibility: visible; animation-name: fadeIn;">Siteplan</h1>
+		<div class="pic_site" style="margin-top: 20px;"><img></div>
+    </div>
+</div>
+
+
+
+<div class="detail_siteplan">
+    <div class="container_24">
+        <h1 class="title wow fadeIn" style="visibility: visible; animation-name: fadeIn;">Type</h1>
+        <div id="parentHorizontalTab" class="show_data" style="display: block; width: 100%; margin: 0px;">
+            <ul class="resp-tabs-list hor_1 wow fadeIn" style="visibility: visible; animation-name: fadeIn;"></ul>
+            <div class="resp-tabs-container hor_1 wow fadeIn" style="border-color: rgb(193, 193, 193); visibility: visible; animation-name: fadeIn;"></div>
+        </div>
+    </div>
+</div>
+<script src="js/easyResponsiveTabs.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        //Horizontal Tab
+        $('#parentHorizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            tabidentify: 'hor_1', // The tab groups identifier
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
+    });
+</script>
+
+
+
+        <div class="dp_frame wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+            <div class="container_24">
+                Info Lebih Lanjut, Klik <img src="img/arrow.png"> <a href="kontak.html"><div class="wa" name="number_WA"><i class="fab fa-whatsapp" aria-hidden="true"></i> </div></a>
+            </div>
+        </div>
+
+        <div class="slide_bottom">
+            <div class="area">
+                <div id="owl-demo1" class="owl-carousel" style="opacity: 1; display: block;"></div>
+            </div>
+        </div>
+        <link href="css/owl.carousel.css" rel="stylesheet">
+        <link href="css/owl.theme.css" rel="stylesheet"> 
+        <script src="js/owl.carousel.js"></script> 
+        <script type="text/javascript">
+            $(document).ready(function() {
+                let slide_bottom = document.getElementById('owl-demo1');
+                let slideLength = 0;
+                while (slideLength < 6) {
+                    for (let i = 0; i < perumahan.length; i++)
+                    {
+                        let div = document.createElement('div');
+                        div.classList.add('box');
+                        div.classList.add('fadeInDown');
+                        
+                        let a = document.createElement('a');
+                        a.href = 'perumahan.html?name=' + perumahan[i].name;
+                        
+                        let img = document.createElement('img');
+                        img.src = 'img/' + perumahan[i].name + '/logo2.png';
+                        
+                        a.appendChild(img);
+                        div.appendChild(a);
+                        slide_bottom.appendChild(div);
+                    }
+                    slideLength++;
+                }
+                
+                let owl = $("#owl-demo1");
+                owl.owlCarousel({
+                    items : 4, //10 items above 1000px browser width
+                    itemsDesktop : [1000,4], //5 items between 1000px and 901px
+                    itemsDesktopSmall : [900,3], // 3 items betweem 900px and 601px
+                    itemsTablet: [550,2], //2 items between 600 and 0;
+                    itemsMobile : false,
+                    autoPlay : 5000,
+                    slideSpeed : 1400
+                });
+                // Custom Navigation Events
+            });
+        </script>
+
+
+
+        <div class="footer wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+            <div class="container_24">
+                <div class="side">
+                    <h1 class="title"><a href="kontak.html">KONTAK</a></h1>
+                        <a href="kontak.html" target="_blank" class="list" name="number_phone"><div class="ico"><i class="fas fa-phone-alt" aria-hidden="true"></i></div> </a>
+                        <a href="kontak.html" target="_blank" class="list" name="number_WA"><div class="ico"><i class="fab fa-whatsapp" aria-hidden="true"></i></div> </a>
+                    </div>
+                <div class="side">
+                    <h1 class="title">SITEMAP</h1>
+                    <a href="." class="list2">Home</a>
+                    <a href="tentang-kami.html" class="list2">Tentang Kami</a>
+                    <!-- <a href="brosur-harga.html" class="list2">Brosur &amp; Harga</a>
+                    <a href="testimoni" class="list2">Testimoni</a> -->
+                    <a href="kontak.html" class="list2">Kontak</a>
+                    <!-- <a href="blog" class="list2">Blog</a>
+                    <a href="privacy-policy" class="list2">Privacy Policy</a> -->
+                </div>
+                <div class="side">
+                    <div class="logo"><a href="."><img src="img/logo_grup.png"></a></div>
+                    <div class="text">Pengembang properti di Banyuwangi sejak tahun 2021, Trifada Properti berfokus pada pengembangan properti perumahan modern dan eksklusif di lingkungan yang nyaman bagi masyarakat Banyuwangi.</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

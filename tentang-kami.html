@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Trifada Property</title>
+        <link rel="icon" type="image/x-icon" href="img/icon.svg" />
+
+        <!-- Font Awesome icons (free version)-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+        <!-- wow -->
+        <link href="css/animate.css" rel="stylesheet" />
+        <script src="js/wow.js"></script>
+        <script>
+            $(document).ready(function() {
+                new WOW().init();
+            })
+        </script>
+        
+        <script src="js/script.js"></script>
+        <link href="css/style.css" rel="stylesheet" />
+        <link href="css/style-mobile.css" rel="stylesheet" />
+        <link href="css/reset.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="header_atas wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+            <div class="kontak_mob">
+                <a href="kontak.html"><i class="fas fa-phone-volume" aria-hidden="true"></i></a>
+                <a href="kontak.html"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+            </div>
+            <div class="container_24">
+                <div class="menu-mobile"><div class="menu-mobile"><a href="#menumob"></a></div></div>
+                <div class="logo"><a href=""><img src="img/logo_grup.png" height="40px"></a></div>
+                <div class="kontak">
+                    <a name="number_WA"><i class="fab fa-whatsapp" aria-hidden="true"></i> </a>
+                    <a name="number_phone"><i class="fas fa-phone-volume" aria-hidden="true"></i> </a>
+                </div>
+            </div>
+        </div>
+        <nav id="menumob" class="mm-menu mm-horizontal mm-offcanvas">
+            <ul class="mm-list mm-panel mm-opened mm-current" id="mm-0">
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item"><a href="." aria-current="page">Home</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="tentang-kami.html">Tentang Kami</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom/ has-sub /"><a class="mm-subopen" href="#mm-1"></a><a href="#">Perumahan</a></li>
+                <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="brosur-harga.html">Brosur &amp; Harga</a></li> -->
+                <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="testimoni">Testimoni</a></li> -->
+                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="kontak.html">Kontak</a></li>
+                <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="blog">Blog</a></li> -->
+            </ul>
+            <ul class="sub-menu mm-list mm-panel mm-hidden" id="mm-1">
+                <li class="mm-subtitle"><a class="mm-subclose" href="#mm-0">Perumahan</a></li>
+            </ul>
+        </nav>
+        <script src="js/jquery.mmenu.min.all.js"></script>
+        <link href="css/jquery.mmenu.all.css" rel="stylesheet" type="text/css" />
+
+
+
+        <div class="menu_atas wow fadeIn" id="navbar" style="visibility: visible; animation-name: fadeIn;">
+            <div class="container_24">
+                <div id="cssmenu">
+                    <ul>
+                        <li name="home"><a href="." aria-current="page">Home</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page" name="tentang-kami"><a href="tentang-kami.html">Tentang Kami</a></li>
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom/ has-sub / "  name="perumahan">
+                            <a href="#">Perumahan</a>
+                            <ul class="sub-menu"></ul>
+                        </li>
+                        <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page" name="brosur-harga"><a href="brosur-harga.html">Brosur &amp; Harga</a></li> -->
+                        <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="testimoni">Testimoni</a></li> -->
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page" name="kontak"><a href="kontak.html">Kontak</a></li>
+                        <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="blog">Blog</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script>
+            function setCurrentMenuItem(name){
+                document.getElementsByName(name).forEach(element => element.classList.add("current-menu-item"));
+            }
+            $(document).ready(function() {
+                window.onscroll = function() {pageYOffsetCheck()};
+                
+                let navbar = document.getElementById("navbar");
+                let sticky = navbar.offsetTop;
+                
+                function pageYOffsetCheck() {
+                    if (window.pageYOffset >= sticky) {
+                        navbar.classList.add("sticky");
+                    } else {
+                        navbar.classList.remove("sticky");
+                    }
+                }
+                
+                let navbar_perumahan = document.getElementById('navbar').getElementsByClassName('sub-menu')[0];
+                for(let i = 0; i < perumahan.length; i++){
+                    let li = document.createElement('li');
+                    li.classList.add('menu-item');
+                    li.classList.add('menu-item-type-post_type');
+                    li.classList.add('menu-item-object-perumahan');
+                    
+                    let a = document.createElement('a');
+                    a.href = 'perumahan.html?name=' + perumahan[i].name;
+                    a.innerHTML = perumahan[i].fullname;
+                    li.appendChild(a);
+                    
+                    navbar_perumahan.appendChild(li);
+                }
+                
+                document.getElementById('menumob').getElementsByClassName('sub-menu')[0].appendChild(navbar_perumahan.cloneNode(true));
+
+                $('nav#menumob').mmenu();
+            })
+        </script>
+        <script>
+            $(document).ready(function() {
+                setCurrentMenuItem('tentang-kami');
+            })
+        </script>
+
+        
+
+<div class="about_home">
+	<div class="container_24">
+        <div class="text wow fadeInLeft" style="animation-name: fadeInLeft;">
+            <h1 class="title wow fadeInUp">PT. Trijaya Fajar Persada</h1><br>
+            <p>
+                PT. Trijaya Fajar Persada merupakan pengembang properti baru bercita - cita menjadi salah satu pengembang properti terkemuka di Banyuwangi yang berdiri pada tahun 2021.<br><br>
+                PT. Trijaya Fajar Persada siap memberikan pelayanan dan kemudahan pada konsumen untuk mendapatkan properti yang ekslusif dan modern.
+            </p><br>
+            <h2 class="title wow fadeInUp">VISI</h2>
+            <ul style="padding-left:25px;">
+                <li>Mengembangkan suatu hunian yang layak dan sesuai dengan dedikasi yang tinggi sehingga terciptanya lingkungan yang nyaman, kondusif dan sejahtera.</li>
+                <li>Menjadi pengembang terkemuka dan profesional yang memberikan nilai optimal bagi masyarakat serta selalu memperhatikan lingkungan yang ramah.</li>
+                <li>Menjadi Perusahaan Properti yang Bertumbuh Cepat dan Terpercaya. demi menjamin kepuasan dan kenyamanan konsumen. serta mampu memberi nilai tambah yang senantiasa meningkat pada kualitas.</li>
+            </ul><br>
+            <h2 class="title wow fadeInUp">MISI</h2>
+            <ul style="padding-left:25px;">
+                <li>Menjadi perusahaan yang terdepan, professional serta menjaga kesinambungan pertumbuhan perusahaan.</li>
+                <li>Menjadi tempat lapangan kerja yang baik.</li>
+                <li>Menjadi wadah investasi paling baik bagi masyarakat.</li>
+                <li>Melaksanakan pembangunan dan pengelolaan properti dengan tata kelola yang baik dan benar.</li>
+                <li>Menyediakan produk dengan kualitas terbaik, ketepatan waktu, dan harga yang kompetitif guna memenuhi kebutuhan masyarakat akan perumahan yang berkelanjutan.</li>
+                <li>Memberikan terobosan terbaru dalam pengembangan desain arsitektur produk.</li>
+                <li>Menjunjung tinggi kualitas produk yang sesuai dengan kontrak.</li>
+                <li>Mengutamakan komitmen servis dan kejujuran dalam berbisnis.</li>
+                <li>Mengikuti perkembangan iptek & menerapkannya secara inovatif.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="dp_frame wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+            <div class="container_24">
+                Info Lebih Lanjut, Klik <img src="img/arrow.png"> <a href="kontak.html"><div class="wa" name="number_WA"><i class="fab fa-whatsapp" aria-hidden="true"></i> </div></a>
+            </div>
+        </div>
+
+        <div class="slide_bottom">
+            <div class="area">
+                <div id="owl-demo1" class="owl-carousel" style="opacity: 1; display: block;"></div>
+            </div>
+        </div>
+        <link href="css/owl.carousel.css" rel="stylesheet">
+        <link href="css/owl.theme.css" rel="stylesheet"> 
+        <script src="js/owl.carousel.js"></script> 
+        <script type="text/javascript">
+            $(document).ready(function() {
+                let slide_bottom = document.getElementById('owl-demo1');
+                let slideLength = 0;
+                while (slideLength < 6) {
+                    for (let i = 0; i < perumahan.length; i++)
+                    {
+                        let div = document.createElement('div');
+                        div.classList.add('box');
+                        div.classList.add('fadeInDown');
+                        
+                        let a = document.createElement('a');
+                        a.href = 'perumahan.html?name=' + perumahan[i].name;
+                        
+                        let img = document.createElement('img');
+                        img.src = 'img/' + perumahan[i].name + '/logo2.png';
+                        
+                        a.appendChild(img);
+                        div.appendChild(a);
+                        slide_bottom.appendChild(div);
+                    }
+                    slideLength++;
+                }
+                
+                let owl = $("#owl-demo1");
+                owl.owlCarousel({
+                    items : 4, //10 items above 1000px browser width
+                    itemsDesktop : [1000,4], //5 items between 1000px and 901px
+                    itemsDesktopSmall : [900,3], // 3 items betweem 900px and 601px
+                    itemsTablet: [550,2], //2 items between 600 and 0;
+                    itemsMobile : false,
+                    autoPlay : 5000,
+                    slideSpeed : 1400
+                });
+                // Custom Navigation Events
+            });
+        </script>
+
+
+
+        <div class="footer wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+            <div class="container_24">
+                <div class="side">
+                    <h1 class="title"><a href="kontak.html">KONTAK</a></h1>
+                        <a href="kontak.html" target="_blank" class="list" name="number_phone"><div class="ico"><i class="fas fa-phone-alt" aria-hidden="true"></i></div> </a>
+                        <a href="kontak.html" target="_blank" class="list" name="number_WA"><div class="ico"><i class="fab fa-whatsapp" aria-hidden="true"></i></div> </a>
+                    </div>
+                <div class="side">
+                    <h1 class="title">SITEMAP</h1>
+                    <a href="." class="list2">Home</a>
+                    <a href="tentang-kami.html" class="list2">Tentang Kami</a>
+                    <!-- <a href="brosur-harga.html" class="list2">Brosur &amp; Harga</a>
+                    <a href="testimoni" class="list2">Testimoni</a> -->
+                    <a href="kontak.html" class="list2">Kontak</a>
+                    <!-- <a href="blog" class="list2">Blog</a>
+                    <a href="privacy-policy" class="list2">Privacy Policy</a> -->
+                </div>
+                <div class="side">
+                    <div class="logo"><a href="."><img src="img/logo_grup.png"></a></div>
+                    <div class="text">Pengembang properti di Banyuwangi sejak tahun 2021, Trifada Properti berfokus pada pengembangan properti perumahan modern dan eksklusif di lingkungan yang nyaman bagi masyarakat Banyuwangi.</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
