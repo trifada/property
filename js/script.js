@@ -24,6 +24,14 @@ const perumahan = [
         linkMaps:'https://maps.app.goo.gl/aL4koTSanBduzgrp7',
         embedMaps:'https://maps.google.com/maps?q=Ikan+Tongkol+Kertosari+Banyuwangi&t=&z=13&ie=UTF8&iwloc=&output=embed',
         pictures:['specification.jpg',]
+    },
+    {name:'karangrejo',  fullname:'Villa Karangrejo', propinsi:'Jawa Timur', dati2:'Banyuwangi', kecamatan:'Banyuwangi', kelurahan:'Karangrejo',   jalan:'Ikan Paus',
+        bgimg:'coming_soon.jpg',
+        point:['Dekat Pusat Kota', 'Dekat Pusat Kuliner', 'Dekat Pusat Pendidikan', 'Dekat Pusat Perbelanjaan'],
+        linkMaps:'https://www.google.com/maps?q=-8.2277748,114.3841053&z=17&hl=en',
+        embedMaps:'https://www.google.com/maps?q=-8.2277748,114.3841053&z=17&hl=en&output=embed',
+        pictures:['spesifikasi_komersil.jpg','spesifikasi_ruko.jpg','spesifikasi_subsidi.jpg'],
+        tipe:[{name:'Komersil', pictures:['spesifikasi_komersil.jpg']}, {name:'Ruko', pictures:['spesifikasi_ruko.jpg']}, {name:'Subsidi', pictures:['spesifikasi_subsidi.jpg']}]
     }];
 
 function insertNumberToElements(name, text, href){
