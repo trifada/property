@@ -8,7 +8,7 @@
         let name = (new URLSearchParams(window.location.search)).get('name');
         for (let i = 0; i < perumahan.length; i++) {
             if(name == perumahan[i].name){
-                document.getElementsByTagName('img')[0].src = 'img/' + name + '/logo.png';
+                document.getElementsByTagName('img')[0].src = 'images/' + name + '/logo.png';
             }
         }
     })

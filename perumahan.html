@@ -6,7 +6,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Trifada Property</title>
-        <link rel="icon" type="image/x-icon" href="img/icon.svg" />
+        <link rel="icon" type="image/x-icon" href="images/icon.svg" />
 
         <!-- Font Awesome icons (free version)-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@
         </div>
         <div class="container_24">
             <div class="menu-mobile"><div class="menu-mobile"><a href="#menumob"></a></div></div>
-            <div class="logo"><a href=""><img src="img/logo_grup.png" height="40px"></a></div>
+            <div class="logo"><a href=""><img src="images/logo_grup.png" height="40px"></a></div>
             <div class="kontak">
                 <a name="number_WA"><i class="fab fa-whatsapp" aria-hidden="true"></i> </a>
                 <a name="number_phone"><i class="fas fa-phone-volume" aria-hidden="true"></i> </a>
@@ -133,7 +133,7 @@
                     bxslider_2.classList.add('box');
                     
                     let bxslider_3 = document.createElement('img');
-                    bxslider_3.src = 'img/' + name + '/' + perumahan[i].pictures[j];
+                    bxslider_3.src = 'images/' + name + '/' + perumahan[i].pictures[j];
                     bxslider_3.style.objectFit = 'contain';
                     bxslider_2.appendChild(bxslider_3);
 
@@ -147,7 +147,7 @@
                     owl_demo2_2.setAttribute('data-slide-index', j);
                     
                     let owl_demo2_3 = document.createElement('img');
-                    owl_demo2_3.src = 'img/' + name + '/' + perumahan[i].pictures[j];
+                    owl_demo2_3.src = 'images/' + name + '/' + perumahan[i].pictures[j];
                     owl_demo2_3.style.objectFit = 'contain';
                     owl_demo2_2.appendChild(owl_demo2_3);
 
@@ -159,7 +159,7 @@
                 for (let j = 0; j < nameClass.length; j++) {
                     nameClass[j].innerHTML = perumahan[i].fullname;
                 }
-                document.getElementsByClassName('header_more')[0].getElementsByTagName('img')[0].src = 'img/' + name + '/' + perumahan[i].bgimg;
+                document.getElementsByClassName('header_more')[0].getElementsByTagName('img')[0].src = 'images/' + name + '/' + perumahan[i].bgimg;
                 
                 let detail_desc = document.getElementsByClassName('detail_desc')[0];
                 detail_desc.getElementsByTagName('a')[0].href = perumahan[i].linkMaps;
@@ -184,14 +184,14 @@
                     
                     detail_desc_call.parentNode.insertBefore(check, detail_desc_call);
                 }
-                detail_desc_call.getElementsByClassName('download')[0].href = 'img/' + name + '/brosur_' + name + '.pdf';
+                detail_desc_call.getElementsByClassName('download')[0].href = 'images/' + name + '/brosur_' + name + '.pdf';
                 detail_desc.getElementsByTagName('iframe')[0].src = './logo-perumahan.html?name=' + name;
                 
                 let detail_location = document.getElementsByClassName('detail_location')[0];
                 detail_location.getElementsByClassName('subtitle')[0].innerHTML =  perumahan[i].kelurahan + ', ' + perumahan[i].kecamatan + ', '+ perumahan[i].dati2;
                 detail_location.getElementsByTagName('iframe')[0].src = perumahan[i].embedMaps;
                 
-                document.getElementsByClassName('detail_siteplan')[0].getElementsByTagName('img')[0].src = 'img/' + name + '/siteplan.png';
+                document.getElementsByClassName('detail_siteplan')[0].getElementsByTagName('img')[0].src = 'images/' + name + '/siteplan.png';
                 
                 let parentHorizontalTab_list = document.getElementById('parentHorizontalTab').getElementsByClassName('resp-tabs-list')[0];
                 let parentHorizontalTab_container = document.getElementById('parentHorizontalTab').getElementsByClassName('resp-tabs-container')[0];
@@ -206,7 +206,7 @@
                     pic_site.classList.add('pic_site');
                     for(let k = 0; k < perumahan[i].tipe[j].pictures.length; k++){
                         let img = document.createElement('img');
-                        img.src = 'img/' + name + '/' + perumahan[i].tipe[j].pictures[k];
+                        img.src = 'images/' + name + '/' + perumahan[i].tipe[j].pictures[k];
                         pic_site.appendChild(img);
                     }
                     parentHorizontalTab_container.appendChild(pic_site);
@@ -347,7 +347,7 @@
 
         <div class="dp_frame wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
             <div class="container_24">
-                Info Lebih Lanjut, Klik <img src="img/arrow.png"> <a href="kontak.html"><div class="wa" name="number_WA"><i class="fab fa-whatsapp" aria-hidden="true"></i> </div></a>
+                Info Lebih Lanjut, Klik <img src="images/arrow.png"> <a href="kontak.html"><div class="wa" name="number_WA"><i class="fab fa-whatsapp" aria-hidden="true"></i> </div></a>
             </div>
         </div>
 
@@ -374,7 +374,7 @@
                         a.href = 'perumahan.html?name=' + perumahan[i].name;
                         
                         let img = document.createElement('img');
-                        img.src = 'img/' + perumahan[i].name + '/logo2.png';
+                        img.src = 'images/' + perumahan[i].name + '/logo2.png';
                         
                         a.appendChild(img);
                         div.appendChild(a);
@@ -417,7 +417,7 @@
                     <a href="privacy-policy" class="list2">Privacy Policy</a> -->
                 </div>
                 <div class="side">
-                    <div class="logo"><a href="."><img src="img/logo_grup.png"></a></div>
+                    <div class="logo"><a href="."><img src="images/logo_grup.png"></a></div>
                     <div class="text">Pengembang properti di Banyuwangi sejak tahun 2021, Trifada Properti berfokus pada pengembangan properti perumahan modern dan eksklusif di lingkungan yang nyaman bagi masyarakat Banyuwangi.</div>
                 </div>
             </div>
