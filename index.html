@@ -190,7 +190,7 @@
                     <script>
                         function aGen1(){
                             let pic_big = document.getElementsByClassName('pic_big')[0]
-                            for (let i=0; i < perumahan.length; i++){
+                            for (let i = 0; i < perumahan.length; i++){
                                 let div = document.createElement('div');
                                 div.classList.add('side');
                                 div.classList.add('wow');
@@ -213,7 +213,7 @@
                     	        name.innerText = perumahan[i].fullname;
                     	        
                     	        let subname = document.createElement("h2");
-                    	        if(i != perumahan.length - 1)
+                    	        if(i < 2)
                     	        {
                                     back.appendChild(name);
                         	        subname.classList.add('subname');
